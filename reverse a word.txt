@@ -1,0 +1,26 @@
+// ake a sentence as an input and reverse every word in that sentence.Example - This is a sunny day > shiT si a ynnus yad.  write java script code //
+
+
+function reverseWords(sentence) 
+ {
+    let words = sentence.split(' ');
+
+    let reversedWords = words.map(word => 
+    {
+        let reversedWord = '';
+        for (let i=word.length-1;i>=0;i--) 
+        {
+            reversedWord += word[i];
+        }
+        return reversedWord;
+    });
+
+    let reversedSentence = reversedWords.join(' ');
+
+    return reversedSentence;
+}
+
+// Example usage
+let inputSentence = "This is a sunny day";
+let reversedSentence = reverseWords(inputSentence);
+console.log(reversedSentence); // Output: "sihT si a ynnus yad"
